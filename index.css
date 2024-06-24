@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter Regular"), url("fonts/Inter-Regular.otf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --percent: 30;
+}
+
+.app_container {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #8ea0dd, #8e6ad3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_panel {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 703px;
+  height: 60px;
+  padding: 16px 18px 15px 22px;
+  background-color: #3579F5;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.app_main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.app_title {
+  padding: 0 10px;
+  border-radius: 40px;
+  background: #2364db;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.app_progress {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.app_next {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.app_button {
+  border-radius: 6px;
+  padding: 10px 32px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  color: rgb(71, 119, 237);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.app_progressButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.app_buttonBar {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 743px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressBar_container {
+  position: relative;
+  width: 63px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progressBar_progress {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 49%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.progressBar_circle {
+  width: 60px;
+  height: 60px;
+  fill: none;
+  stroke-dashoffset: 186;
+  stroke-dasharray: 186;
+}
+.progressBar_circle :nth-child(1) {
+  cx: 30;
+  cy: 30;
+  r: 29.5;
+  stroke-dashoffset: 0;
+  stroke: #FFFFFF;
+  opacity: 0.5;
+  stroke-width: 1px;
+}
+.progressBar_circle :nth-child(2) {
+  cx: 30;
+  cy: 30;
+  r: 29.5;
+  stroke-dashoffset: calc(186 - 186 * var(--percent) / 100);
+  stroke: #FFFFFF;
+  stroke-width: 2;
+}
+
+/*# sourceMappingURL=index.css.map */
